@@ -10,21 +10,20 @@
       
       <style>
       body {
-        font-size: 62.5%;
         font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
       }
-      div#library table {
+      div#new_book table {
         margin: 1em 0;
         border-collapse: collapse;
         width: 80%;
       }
-      div#library table td, div#library table th {
+      div#new_book table td, div#new_book table th {
         border: 1px solid #BDBDBD;
       }
-      div#library table td {
+      div#new_book table td {
         text-align: left;
       }
-      div#library table th {
+      div#new_book table th {
         background-color:#73949D;
         color:white }
       .book-type{
@@ -32,9 +31,17 @@
         font-weight:bold;
       }
       
-      div#library table tr td:first-child{
+      div#new_book table tr td:first-child{
         text-align: center;
       } 
+
+      .question_comments * {
+	  vertical-align: middle;
+      }
+  
+      .required {
+	color:red;
+      }
 
     </style>
     
@@ -62,7 +69,7 @@
       </font>
     </b>
   </p>
-  <div id="library">
+  <div id="new_book">
     <center>
       <table  cellspacing="1">
         <thead>
@@ -709,54 +716,22 @@
   
   <input type="hidden" name="to_email" value="eyc@eychen.com">
   
-  <input type="hidden" name="subject" value="Re: Mccc Publication comments">
-  
-  <!--
-<input type="hidden" name="redirect" value="http://www.example.com/confirm.htm">
--->
+  <input type="hidden" name="subject" value="Re: Mccc Library comments">
   
   <input type="hidden" name="sort_type" value="field">
   
   <input type="hidden" name="sort_fields" value="firstname,lastname,email,comments">
   
-  <PRE>
     <b>
-      <font color="#FF0000" size="3">
-        * Required fields
-      </font>
-      <font size="3">
-      </font>
-      <font color="#FF0000" size="3">
-        *
-      </font>
-      <font size="3">
-        First Name:      
-      </font>
-      <INPUT TYPE="TEXT" NAME="firstname" SIZE="30" MAXLENGTH="30">
-      <font color="#FF0000" size="3">
-        *
-      </font>
-      <font size="3">
-        Last Name:       
-      </font>
-      <INPUT TYPE="TEXT" NAME="lastname" SIZE="30" MAXLENGTH="30">
-      <font color="#FF0000" size="3">
-        *
-      </font>
-      <font size="3">
-        Email Address:   
-      </font>
-      <INPUT TYPE="TEXT" NAME="email" SIZE="48" MAXLENGTH="200">
-      
-      <font size="3">
-        Questions &amp; comments:
-      </font>
-      <TEXTAREA NAME="comments" ROWS=5 COLS=40 WRAP>
-      </TEXTAREA>
+        <div class="required">
+	  * Required fields 
+	</div>
+        <div><label for="firstname" ><span class="required">*</span> First Name:</label><INPUT TYPE="TEXT" id="firstname" NAME="firstname" SIZE="30" MAXLENGTH="30"></div>
+        <div><label for="lastname"><span class="required">*</span> Last Name: </label><INPUT TYPE="TEXT" id="lastname" NAME="lastname" SIZE="30" MAXLENGTH="30"></div>
+        <div><label for="email"><span class="required">*</span> Email Address:</label><INPUT TYPE="TEXT"  id="email" NAME="email" SIZE="46" MAXLENGTH="200"></div>
+        <div class="question_comments"><label for="comments">Questions &amp; comments:</label><TEXTAREA id="comments" NAME="comments" ROWS=5 COLS=40 WRAP></TEXTAREA></div>
     </b>
-  </PRE>
   <INPUT TYPE="submit" VALUE="Submit">
-  
   <INPUT TYPE="reset" VALUE="Reset">
   
 </FORM>
@@ -768,7 +743,7 @@
 <p>
   <br>
   <a href="http://www.mccc.org/mccc/">
-    <img src="dua.gif" border=0 width="30" height="30">
+    <img src="http://www.mccc.org/dua.gif" border=0 width="30" height="30">
   </a>
   Return to 
   <a href="http://www.mccc.org/mccc/">

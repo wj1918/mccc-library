@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+</title>
+
+<link rel="stylesheet" type="text/css" href="mccc-library.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	var types={
+		"chinese":"Chinese Books",
+		"adult":"Adults Books",
+		"children":"Children Books"
+	}
+
+	function getParameterByName(name) {
+	    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+	    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+	        results = regex.exec(location.search);
+	    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	}
+	
+  var type=getParameterByName("type");
+  
+  $.getJSON( "api/all.php?type="+encodeURIComponent(type))
+    .done(function( data ) {
+
+	console.log("type="+type);
+	var title=types[type];
+    window.document.title=title;
+	console.log("title="+title);
+    
+	var html='<h1>'+title+'</h1>'+
+	'<div class="new_book">'+
+	   '<center>'+
+	      '<table  cellspacing="1">'+
+	         '<thead>'+
+	            '<tr>'+
+	               '<th>'+
+	               '</th>'+
+	               '<th width="40%">'+
+	               '   AUTHOR'+
+	               '</th>'+
+	               '<th  width="50%">'+
+	                  'TITLE'+
+	               '</th>'+
+	            '</tr>'+
+	         '</thead>'+
+	         '<tbody>';
+	    $.each( data, function( i, item ) {
+
+		   html+='<TR>'+
+		               '<TD>'+item.classNumber+'</TD>'+
+		               '<TD>'+item.author+'</TD>'+
+		               '<TD>'+item.title+'</TD>'+
+		            '</TR>';
+       		
+      	});
+
+	html+='</tbody>'+
+		'</table>'+
+	'</div>';
+	$("body").append(html);
+  
+    })
+  	.fail(function() {
+    	//console.log( "error" );
+	});
+
+});
+</script>
+</head>
+
+<body>
+</body>
+</html>

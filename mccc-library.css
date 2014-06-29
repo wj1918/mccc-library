@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+div.new_book table {
+    margin: 1em 0;
+    border-collapse: collapse;
+    width: 80%;
+}
+div.new_book table td, div#new_book table th {
+    border: 1px solid #BDBDBD;
+}
+div.new_book table td {
+    text-align: left;
+}
+div.new_book table th {
+    background-color:#73949D;
+    color:white }
+.book-type{
+    background-color:#FCCA8F;
+    font-weight:bold;
+}
+
+div.new_book table tr td:first-child{
+    text-align: center;
+} 
+
+.question_comments * {
+    vertical-align: middle;
+}
+
+.required {
+    color:red;
+}
+
+
+form { 
+    font-size:smaller; 
+} 
+
+img.bar {
+    max-width: 80%;
+    left:0;
+    right:0;
+    margin:0 auto;   
+}
+h1 {
+	text-align: center;
+}

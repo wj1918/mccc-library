@@ -7,7 +7,7 @@ body {
 div.new_book table {
     margin: 1em 0;
     border-collapse: collapse;
-    width: 100%;
+    width: 90%;
 }
 div.new_book table td, div#new_book table th {
     border: 1px solid #BDBDBD;
@@ -61,7 +61,7 @@ h1 {
 
 #new_book_div{
     float:left;
-    margin-left: 100px;
+    margin-left: 20px;
 }
 
 .category th {

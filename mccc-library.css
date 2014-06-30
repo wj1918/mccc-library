@@ -7,7 +7,7 @@ body {
 div.new_book table {
     margin: 1em 0;
     border-collapse: collapse;
-    width: 80%;
+    width: 100%;
 }
 div.new_book table td, div#new_book table th {
     border: 1px solid #BDBDBD;
@@ -49,3 +49,29 @@ img.bar {
 h1 {
 	text-align: center;
 }
+
+#category_div{
+    float:right;
+    margin-right: 20px;
+    border:1px;
+    border-style:solid;
+    border-color:#BDBDBD;    
+    
+}
+
+#new_book_div{
+    float:left;
+    margin-left: 100px;
+}
+
+.category th {
+    border: 1px solid #BDBDBD;
+}
+
+.category table th {
+    background-color:#73949D;
+    color:white 
+}
+
+
+

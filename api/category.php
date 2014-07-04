@@ -12,7 +12,12 @@ function enc($str){
 $booktypes = array (
     "chinese"  => "SELECT * FROM `LIB_CB-DB`",
     "adult" =>  "SELECT * FROM `LIB_EB-DB`",
-    "children"   =>  "SELECT * FROM `LIB_KEB-DB`"
+    "children"   =>  "SELECT * FROM `LIB_KEB-DB`",
+    "chinese-cd"   =>  "SELECT * FROM `LIB_CCD-DB`",
+    "chinese-dvd"   =>  "SELECT * FROM `LIB_CDVD-DB`",
+    "english-dvd"   =>  "SELECT * FROM `LIB_EDVD-DB`",
+    "kids-english-dvd"   =>  "SELECT * FROM `LIB_KEDVD-DB`",
+    "kids-chinese-dvd"   =>  "SELECT * FROM `LIB_KCDVD-DB`"
     );
     
 /*
